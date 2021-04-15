@@ -37,7 +37,7 @@ public class DistributeClient {
 
     // 获取服务器列表信息
     public void getServerList() throws Exception {
-        // 1 获取服务器子节点信息，并且对父节点进行监听，当父节点的子节点信息改变时，会触发这个回调函数中的getServerList();并且我们可以发现这里的watcher不是一次性的
+        // 1 获取服务器子节点信息，并且对父节点进行监听，当父节点的子节点信息改变时，会触发这个回调函数中的getServerList();
         List<String> children = zk.getChildren(parentNode, true);
         // 2 存储服务器信息列表
         ArrayList<String> servers = new ArrayList<>();
